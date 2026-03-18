@@ -1,0 +1,288 @@
+:root {
+  --bg: #f9f7f3;
+  --paper: #fffefc;
+  --ink: #1f2a2f;
+  --muted: #4d5b63;
+  --accent: #0f6b6d;
+  --line: #d8d5cf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, #ece8de 0%, transparent 40%),
+    radial-gradient(circle at 90% 0%, #dfeeea 0%, transparent 38%),
+    var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.hero {
+  padding: 4.5rem 1.25rem 2.25rem;
+}
+
+.hero--compact {
+  padding: 2.4rem 1.25rem 1.3rem;
+}
+
+.hero--compact h1 {
+  font-size: clamp(1.7rem, 4.2vw, 2.35rem);
+}
+
+.hero__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero__text {
+  flex: 1;
+}
+
+.hero__eyebrow {
+  margin: 0;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0.35rem;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.hero__subtitle {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.hero__subtitle--compact {
+  margin-top: 0.35rem;
+  font-size: 1rem;
+}
+
+.hero__links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.9rem 1rem;
+  flex-wrap: wrap;
+}
+
+.hero__links a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+}
+
+.hero__links i,
+.contact-list i,
+.entry i {
+  margin-right: 0.38rem;
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  background: rgba(249, 247, 243, 0.92);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.55rem 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.site-nav__inner a {
+  text-decoration: none;
+  color: #2f3f47;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.36rem 0.78rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.site-nav__inner a:hover {
+  border-color: var(--line);
+  background: #f5f2eb;
+}
+
+.site-nav__inner a.is-active {
+  background: var(--accent);
+  color: #f5fffe;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.1rem 1.25rem 3rem;
+}
+
+section {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 30px rgba(20, 22, 24, 0.04);
+}
+
+h2 {
+  margin-bottom: 0.65rem;
+  font-size: 1.45rem;
+}
+
+h3 {
+  font-size: 1.12rem;
+}
+
+p,
+li {
+  color: #29363c;
+}
+
+ul,
+ol {
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-list li + li {
+  margin-top: 0.45rem;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.25rem 0;
+}
+
+.entry + .entry {
+  margin-top: 0.5rem;
+  border-top: 1px dashed var(--line);
+  padding-top: 0.75rem;
+}
+
+.entry p {
+  margin: 0.2rem 0;
+  color: var(--muted);
+}
+
+.entry span {
+  white-space: nowrap;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.footer {
+  padding: 0 1.25rem 2.2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .site-nav__inner {
+    gap: 0.38rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .site-nav__inner a {
+    text-align: center;
+    padding: 0.34rem 0.5rem;
+    font-size: 0.94rem;
+    flex: 1 1 calc(33.333% - 0.4rem);
+  }
+
+  .entry {
+    flex-direction: column;
+  }
+
+  .entry span {
+    margin-top: 0.3rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fffefc;
+  box-shadow: 0 8px 24px rgba(20, 22, 24, 0.18);
+  flex-shrink: 0;
+}
+
+.profile-photo--compact {
+  width: 98px;
+  height: 98px;
+  border-width: 2px;
+}
+
+@media (max-width: 700px) {
+  .hero__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.talk-subtitle {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.talk-list li + li {
+  margin-top: 1rem;
+}
+
+.talk-list li {
+  margin-bottom: 0;
+}
+
+h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
