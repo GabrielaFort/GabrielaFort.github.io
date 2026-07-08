@@ -1,3 +1,3 @@
 # GabrielaFort.github.io
 
-Academic portfolio website for GitHub Pages.
+Portfolio website for GitHub Pages. [Link to portfolio](https://gabrielafort.github.io/)
